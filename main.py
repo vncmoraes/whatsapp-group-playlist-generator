@@ -20,7 +20,7 @@ playlist_ids = {
     2025: 'playlist_id_2',
 }
 
-def get_track_ids_from_file_by_year() -> dict::
+def get_track_ids_from_file_by_year() -> dict:
     track_ids_by_year = {}
 
     with open("group_messages.txt", 'r', encoding="utf8") as file:
