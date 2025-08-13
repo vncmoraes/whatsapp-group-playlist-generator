@@ -3,7 +3,6 @@ import spotipy
 import regex as re
 from spotipy.oauth2 import SpotifyOAuth
 import math
-import os
 
 # Spotify Authentication
 sp = spotipy.Spotify(
@@ -21,7 +20,7 @@ playlist_ids = {
     2025: 'playlist_id_2',
 }
 
-def get_track_ids_from_file_by_year():
+def get_track_ids_from_file_by_year() -> dict::
     track_ids_by_year = {}
 
     with open("group_messages.txt", 'r', encoding="utf8") as file:
@@ -46,7 +45,7 @@ def get_track_ids_from_file_by_year():
     return track_ids_by_year
 
 
-def get_all_track_ids_from_playlist(playlist_id):
+def get_all_track_ids_from_playlist(playlist_id: str) -> list:
     if not playlist_id:
         return []
 
